@@ -62,7 +62,7 @@ func parseDotString(input string) (DotData, error) {
 }
 
 func (dj *DotJson_s) GenDotFile() (string, error) {
-	fmt.Println("enter GetDotFile")
+//	fmt.Println("enter GetDotFile")
 	dotStr := strings.Split(dj.Dot, "\n")
 	var edgeinfo []DotData
 	var nodeinfo []string
@@ -129,8 +129,8 @@ func (dj *DotJson_s) GenDotFile() (string, error) {
 	file.Write([]byte(content))
 	file.Close()
 	pngfile := "./output/" + formattedTime + ".png"                                                        // 确保文件在操作完成后被关闭
-	cmd := exec.Command("dot", "-Tpng", "-o", pngfile, filename) // 在 Windows 上可以是 "cmd", "/c", "dir"
-	fmt.Println(cmd)
+	cmd := exec.Command("circo", "-Tpng", "-o", pngfile, filename) // 在 Windows 上可以是 "cmd", "/c", "dir"
+//	fmt.Println(cmd)
 	// 捕获标准输出和标准错误
 	var stdout, stderr bytes.Buffer
 	cmd.Stdout = &stdout

@@ -6,6 +6,8 @@
 
 dot语法总结: https://onlookerliu.github.io/2017/12/28/dot语法总结/#1-简介
 
+> 最终布局方式使用了circo -> 圆环布局。
+
 ## preview
 
 ![image-20250206012334933](pic/image-20250206012334933.png)

@@ -38,7 +38,7 @@ func main() {
 			fmt.Println("parse json error")
 			return
 		}
-		fmt.Println(dot_json.Dot)
+//		fmt.Println(dot_json.Dot)
 		pngfile, err := dot_json.GenDotFile()
 
 		// 打开图片文件
