@@ -1,0 +1,153 @@
+/* 设置整体布局 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa; /* 轻柔的背景色 */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 填满整个视口高度 */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 主容器，使用flexbox来布局左右两个部分 */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 90vh; /* 最大化高度 */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 左侧输入区域 */
+.input-container {
+    flex: 1;
+    padding: 40px;
+    border-right: 2px solid #e0e0e0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    height: 65%; /* 设定最小高度 */
+}
+
+textarea:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #5a54d0;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* 右侧绘图区域 */
+.drawing-container {
+    flex: 1;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.drawing-container h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.canvas {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 18px;
+    object-fit: contain;
+	height: 65%; /* 设置默认高度 */
+}
+
+/* 下载按钮样式 */
+.download-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    display: none; /* 默认隐藏 */
+}
+
+.download-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.download-btn:active {
+    transform: scale(1);
+}
+
+.rounded-img {
+    border-radius: 8px;
+}
+
+.error {
+    border: 2px solid red; /* 设置红色边框 */
+}
